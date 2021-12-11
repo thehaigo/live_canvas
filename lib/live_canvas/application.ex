@@ -13,9 +13,9 @@ defmodule LiveCanvas.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: LiveCanvas.PubSub},
       # Start the Endpoint (http/https)
-      LiveCanvasWeb.Endpoint
+      LiveCanvasWeb.Endpoint,
       # Start a worker by calling: LiveCanvas.Worker.start_link(arg)
-      # {LiveCanvas.Worker, arg}
+      {LiveCanvas.Worker, [name: LiveCanvas.Worker]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
