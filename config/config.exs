@@ -7,6 +7,7 @@
 # General application configuration
 import Config
 
+config :exla, :clients, default: [platform: :host, memory_fraction: 0.8]
 # Configures the endpoint
 config :live_canvas, LiveCanvasWeb.Endpoint,
   url: [host: "localhost"],

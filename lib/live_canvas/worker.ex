@@ -43,6 +43,7 @@ defmodule LiveCanvas.Worker do
     {:reply, pixel, state}
   end
 
+  @defn_compiler {EXLA, [platform: :host]}
   defn reverse(pixel) do
     pixel
     |> Nx.slice_axis(0, 3, -1)
